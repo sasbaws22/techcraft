@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+@layer base {
+  body {
+    @apply antialiased;
+  }
+}
+
+@layer components {
+  .section-padding {
+    @apply py-20 px-4;
+  }
+
+  .service-card {
+    @apply bg-white p-6 rounded-xl shadow-lg transition-all duration-300 hover:shadow-2xl hover:-translate-y-1 cursor-pointer;
+  }
+
+  .service-icon {
+    @apply text-blue-600 transition-transform duration-300 transform group-hover:scale-110;
+  }
+
+  .stage-card {
+    @apply bg-white p-8 rounded-xl shadow-lg transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 cursor-pointer;
+  }
+
+  .tech-card {
+    @apply flex flex-col items-center p-6 rounded-xl transition-all duration-300 hover:bg-blue-50;
+  }
+
+  .tech-icon {
+    @apply text-blue-600 transition-transform duration-300 transform hover:scale-110;
+  }
+
+  .cta-button {
+    @apply bg-green-500 hover:bg-green-600 text-white px-8 py-4 rounded-full font-semibold 
+    transition-all duration-300 transform hover:scale-105 hover:shadow-lg 
+    active:scale-95 flex items-center space-x-2 mx-auto;
+  }
+
+  .nav-indicator {
+    @apply absolute bottom-10 left-1/2 transform -translate-x-1/2 
+    animate-bounce cursor-pointer transition-opacity duration-300 
+    hover:opacity-75 active:opacity-50;
+  }
+}
+
+/* Animations */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
