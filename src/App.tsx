@@ -51,9 +51,7 @@ function App() {
                 <button
                   key={section}
                   onClick={() => scrollToSection(section)}
-                  className={`capitalize ${
-                    isScrolled ? 'text-gray-700' : 'text-white'
-                  } hover:text-blue-500 transition-colors duration-300 ${
+                  className={`capitalize ${isScrolled ? 'text-gray-700' : 'text-white'} hover:text-blue-500 transition-colors duration-300 ${
                     activeSection === section ? 'font-bold' : ''
                   }`}
                 >
@@ -97,10 +95,7 @@ function App() {
               <span>Start Your Project</span>
             </button>
           </div>
-          <div 
-            className="nav-indicator"
-            onClick={() => scrollToSection('about')}
-          >
+          <div className="nav-indicator" onClick={() => scrollToSection('about')}>
             <ChevronDown className="w-8 h-8" />
           </div>
         </div>
@@ -120,29 +115,14 @@ function App() {
             </div>
             <div className="space-y-4">
               <p className="text-lg text-gray-700 leading-relaxed">
-                At TechCraft Studio, we transform digital ideas into powerful realities. With years of expertise in website and software development, we craft solutions that drive business growth and user engagement.
+                At TechCraft Studio, we harness the latest industry trends and advanced technologies to deliver innovative digital solutions. Our approach is grounded in agile methodologies, continuous improvement, and a deep understanding of emerging digital trends.
               </p>
               <p className="text-lg text-gray-700 leading-relaxed">
-                Our team of passionate developers and designers work together to deliver exceptional digital experiences that stand out in today's competitive landscape.
+                With a dedicated team of experts in design, development, and digital strategy, we empower businesses to achieve their full potential by transforming their online presence. Our expertise spans custom web development, e-commerce, API development, AI automation, and enterprise integrations.
               </p>
-              <div className="mt-6 p-4 bg-blue-50 rounded-lg border border-blue-100">
-                <div className="flex items-center gap-3 mb-2">
-                  <CreditCard className="w-6 h-6 text-blue-600" />
-                  <h3 className="text-lg font-semibold text-blue-900">Client-First Payment Policy</h3>
-                </div>
-                <p className="text-gray-700">
-                  We believe in delivering value before expecting payment. Full payment is only required after project completion and client satisfaction is guaranteed.
-                </p>
-              </div>
-              <div className="mt-4 p-4 bg-green-50 rounded-lg border border-green-100">
-                <div className="flex items-center gap-3 mb-2">
-                  <Percent className="w-6 h-6 text-green-600" />
-                  <h3 className="text-lg font-semibold text-green-900">Flexible Pricing & Discounts</h3>
-                </div>
-                <p className="text-gray-700">
-                  Enjoy discounts ranging from 10% to 40% based on project scope. Watch out for seasonal promotions and special offers throughout the year!
-                </p>
-              </div>
+              <p className="text-lg text-gray-700 leading-relaxed">
+                We emphasize collaboration, transparency, and innovation in every project, ensuring that our clients not only meet but exceed their business goals. Our commitment to quality and adherence to industry best practices makes us a trusted partner for forward-thinking organizations.
+              </p>
             </div>
           </div>
         </div>
@@ -154,12 +134,36 @@ function App() {
           <h2 className="text-4xl font-bold text-center mb-12">Our Services</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
-              { icon: <Globe className="w-8 h-8" />, title: 'Custom Web Development', description: 'Tailored websites that perfectly match your brand and goals' },
-              { icon: <ShoppingCart className="w-8 h-8" />, title: 'E-commerce Solutions', description: 'Powerful online stores with seamless shopping experiences' },
-              { icon: <Code className="w-8 h-8" />, title: 'API Development', description: 'Robust and scalable APIs for your business needs' },
-              { icon: <Cpu className="w-8 h-8" />, title: 'AI Automation', description: 'Harness the power of AI to optimize workflows and automate your operations' },
-              { icon: <Link className="w-8 h-8" />, title: 'Mulesoft Integration', description: 'Enterprise-grade API integration and management solutions' },
-              { icon: <Cloud className="w-8 h-8" />, title: 'Salesforce Solutions', description: 'Custom Salesforce development and integration services' },
+              { 
+                icon: <Globe className="w-8 h-8" />, 
+                title: 'Custom Web Development', 
+                description: 'Tailored websites with mobile-first design, performance optimization, SEO, and robust security.' 
+              },
+              { 
+                icon: <ShoppingCart className="w-8 h-8" />, 
+                title: 'E-commerce Solutions', 
+                description: 'Robust online stores featuring omnichannel experiences, headless commerce, and secure payments.' 
+              },
+              { 
+                icon: <Code className="w-8 h-8" />, 
+                title: 'API Development', 
+                description: 'Scalable APIs with REST/GraphQL, microservices architecture, strong security, and comprehensive documentation.' 
+              },
+              { 
+                icon: <Cpu className="w-8 h-8" />, 
+                title: 'AI Automation', 
+                description: 'Streamline business processes using AI, RPA, machine learning, chatbots, and intelligent workflows.' 
+              },
+              { 
+                icon: <Link className="w-8 h-8" />, 
+                title: 'Mulesoft Integration', 
+                description: 'Seamless enterprise integrations via API-led connectivity ensuring data synchronization and enhanced security.' 
+              },
+              { 
+                icon: <Cloud className="w-8 h-8" />, 
+                title: 'Salesforce Solutions', 
+                description: 'Tailored Salesforce implementations with Lightning, AI integration, and automation to boost customer engagement.' 
+              },
             ].map((service, index) => (
               <div key={index} className="group service-card">
                 <div className="service-icon">{service.icon}</div>
@@ -222,7 +226,7 @@ function App() {
       <section id="technologies" className="py-20 bg-gray-50">
         <div className="max-w-6xl mx-auto px-4">
           <h2 className="text-4xl font-bold text-center mb-12">Technologies We Use</h2>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-8">
             {[
               { icon: <Code className="w-12 h-12" />, name: 'React' },
               { icon: <Database className="w-12 h-12" />, name: 'PostgreSQL' },
@@ -231,7 +235,7 @@ function App() {
               { icon: <Link className="w-12 h-12" />, name: 'Mulesoft' },
               { icon: <Cloud className="w-12 h-12" />, name: 'Salesforce' },
             ].map((tech, index) => (
-              <div key={index} className="tech-card">
+              <div key={index} className="tech-card flex flex-col items-center">
                 <div className="tech-icon">{tech.icon}</div>
                 <p className="font-semibold mt-2">{tech.name}</p>
               </div>
