@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react'; 
+import { motion } from 'framer-motion';
 import { ChevronDown, Code, ShoppingCart, Palette, MessageSquare, MapIcon as WhatsappIcon, Database, Globe, Cloud, Link, Search, Cpu, Rocket, CheckCircle, CreditCard, Percent, Gift } from 'lucide-react';
 
 function App() {
@@ -77,11 +78,19 @@ function App() {
           <div className="bg-blue-800/50 px-6 py-2 rounded-full inline-block mb-6">
             <div className="flex items-center gap-2">
               <Gift className="w-5 h-5 text-yellow-400" />
-              <span className="text-yellow-400">Special Offer: Up to 40% off on selected projects!</span>
+              <span className="text-yellow-400">Special Offer: Up to 20% off on first projects!</span>
             </div>
           </div>
           <h1 className="text-5xl md:text-7xl font-bold mb-6 animate-float">TechCraft Studio</h1>
           <p className="text-xl md:text-2xl mb-8 text-blue-200">Innovative Website Development for Your Business</p>
+		   <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.2 }}
+            className="mb-4 text-lg font-medium text-yellow-600"
+          >
+            No Upfront Payment – Pay Only When You're 100% Satisfied!
+          </motion.div>
           <div className="space-x-4">
             <button onClick={openWhatsApp} className="cta-button">
               <WhatsappIcon className="w-5 h-5" />
