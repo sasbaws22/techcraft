@@ -83,7 +83,7 @@ function App() {
           </div>
           <h1 className="text-5xl md:text-7xl font-bold mb-6 animate-float">TechCraft Studio</h1>
           <p className="text-xl md:text-2xl mb-8 text-blue-200">Innovative Website Development for Your Business</p>
-		   <motion.div
+          <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.2 }}
@@ -157,7 +157,7 @@ function App() {
               { icon: <Globe className="w-8 h-8" />, title: 'Custom Web Development', description: 'Tailored websites that perfectly match your brand and goals' },
               { icon: <ShoppingCart className="w-8 h-8" />, title: 'E-commerce Solutions', description: 'Powerful online stores with seamless shopping experiences' },
               { icon: <Code className="w-8 h-8" />, title: 'API Development', description: 'Robust and scalable APIs for your business needs' },
-              { icon: <Palette className="w-8 h-8" />, title: 'UI/UX Design', description: 'Beautiful and intuitive user interfaces that convert' },
+              { icon: <Cpu className="w-8 h-8" />, title: 'AI Automation', description: 'Harness the power of AI to optimize workflows and automate your operations' },
               { icon: <Link className="w-8 h-8" />, title: 'Mulesoft Integration', description: 'Enterprise-grade API integration and management solutions' },
               { icon: <Cloud className="w-8 h-8" />, title: 'Salesforce Solutions', description: 'Custom Salesforce development and integration services' },
             ].map((service, index) => (
